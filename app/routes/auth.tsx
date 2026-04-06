@@ -5,7 +5,7 @@ import { usePuterStore } from "~/lib/puter"
 export const meta = () => {[
     {title : 'Resumind | Auth'},
     {name: 'description', content: 'Login to your account.'}
-]}
+]};
 
 const auth = () => {
     const {isLoading,auth} = usePuterStore();
@@ -34,11 +34,11 @@ const auth = () => {
                     </button>
                 ):( <>
                     {auth.isAuthenticated ? (
-                      <button className="auth-button onClick={auth.signOut}"> 
+                      <button className="auth-button" onClick={auth.signOut}> 
                         <p>Log Out</p>
                       </button>
                     ):(
-                      <button className="auth-button onClick={auth.signIn}">
+                      <button className="auth-button" onClick={auth.signIn}>
                         <p>Log in</p>
                       </button>
                     )}
